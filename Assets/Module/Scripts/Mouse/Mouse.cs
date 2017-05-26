@@ -9,19 +9,26 @@ namespace Temple {
 		Vector2 dragStartPosition;
 		Vector2 dragEndPosition;
 
+		int xIndex;
+		int yIndex;
+
 		TileMap worldMap;
 		Dictionary<Tile, GameObject> tileGOBindings;
 
-		public Vector2 Position { get { return position; }}
+
+		public void AssociateMap(TileMap map, Dictionary<Tile, GameObject> bindings) {
+			this.worldMap = map;
+			this.tileGOBindings = bindings;
+		}
 
 		void Update() {
 			this.position = (Vector2)Camera.main.ScreenToWorldPoint (Input.mousePosition);
 
-			int xIndex = Mathf.FloorToInt (Position.x);
-			int yIndex = Mathf.FloorToInt (Position.y);
+			this.xIndex = Mathf.FloorToInt (position.x);
+			this.yIndex = Mathf.FloorToInt (position.y);
 
 			if (WithinMapRange (worldMap, xIndex, yIndex) == false) {
-				print ("Mouse clicked out of range.");
+				print ("Mouse is out of range.");
 				return;
 			}
 
@@ -41,13 +48,8 @@ namespace Temple {
 		bool WithinMapRange(TileMap map, int x, int y) {
 			return (x >= 0 && x < map.Width) && (y >= 0 && y < map.Height);
 		}
-
-		public void AssociateMap(TileMap map, Dictionary<Tile, GameObject> bindings) {
-			this.worldMap = map;
-			this.tileGOBindings = bindings;
-		}
-
-		public void DrawRect(Vector2 start, Vector2 end) {
+			
+		void DrawRect(Vector2 start, Vector2 end) {
 			int startX;
 			int startY;
 			int endX;
@@ -77,14 +79,13 @@ namespace Temple {
 
 			for (int x = startX; x <= endX; x++) {
 				for (int y = startY; y <= endY; y++) {
-					Tile t = worldMap.GetTileAt (x, y);
-					SpriteRenderer tileSR = tileGOBindings [t].GetComponentInChildren<SpriteRenderer> ();
-					tileSR.color = Color.blue;
 					if (outline) {
 						if ((x != startX && x != endX) && (y != startY && y != endY)) {
-							tileSR.color = Color.white;
+							continue;
 						}
 					}
+					Tile t = worldMap.GetTileAt (x, y);
+					tileGOBindings [t].GetComponentInChildren<SpriteRenderer> ().color = Color.blue;
 				}
 			}
 		}

@@ -46,12 +46,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Module\Scripts\Agent\Agent.cs" />
      <Compile Include="Assets\Module\Scripts\Main\Main.cs" />
-     <Compile Include="Assets\Module\Scripts\MapVisualizer\MapVisualizer.cs" />
      <Compile Include="Assets\Module\Scripts\Mouse\Mouse.cs" />
+     <Compile Include="Assets\Module\Scripts\Species\Species.cs" />
      <Compile Include="Assets\Module\Scripts\Tile\Tile.cs" />
      <Compile Include="Assets\Module\Scripts\TileMap\TileMap.cs" />
      <Compile Include="Assets\Module\Scripts\TileTypes\TileTypes.cs" />
+     <Compile Include="Assets\Module\Scripts\Visualizer\Visualizer.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

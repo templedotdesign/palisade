@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Module/Scripts/Mouse/Mouse.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Module/Scripts/Agent/Agent.cs">
     <Files>
-      <File FileName="Assets/Module/Scripts/Main/Main.cs" Line="37" Column="4" />
-      <File FileName="Assets/Module/Scripts/Tile/Tile.cs" Line="25" Column="24" />
-      <File FileName="Assets/Module/Scripts/TileMap/TileMap.cs" Line="39" Column="13" />
+      <File FileName="Assets/Module/Scripts/Main/Main.cs" Line="44" Column="5" />
+      <File FileName="Assets/Module/Scripts/Mouse/Mouse.cs" Line="33" Column="5" />
+      <File FileName="Assets/Module/Scripts/Tile/Tile.cs" Line="12" Column="20" />
+      <File FileName="Assets/Module/Scripts/TileMap/TileMap.cs" Line="43" Column="4" />
       <File FileName="Assets/Module/Scripts/TileTypes/TileTypes.cs" Line="9" Column="1" />
-      <File FileName="Assets/Module/Scripts/MapVisualizer/MapVisualizer.cs" Line="42" Column="82" />
-      <File FileName="Assets/Module/Scripts/Mouse/Mouse.cs" Line="93" Column="1" />
+      <File FileName="Assets/Module/Scripts/Visualizer/Visualizer.cs" Line="89" Column="24" />
+      <File FileName="Assets/Module/Scripts/Agent/Agent.cs" Line="35" Column="30" />
+      <File FileName="Assets/Module/Scripts/Species/Species.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

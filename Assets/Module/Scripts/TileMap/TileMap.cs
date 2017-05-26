@@ -41,6 +41,5 @@
 				}
 			}	
 		}
-
 	}//end class TileMap
 }//end namespace Temple
